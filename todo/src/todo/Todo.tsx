@@ -2,7 +2,7 @@ import Modal from "./Modal";
 
 const Todo = () => {
   return (
-    <div>
+    <div className="w-full h-full relative">
       <div className="flex h-screen">
         <div className="w-1/3 bg-red-300">
           <h1 className="text-center">Todo</h1>

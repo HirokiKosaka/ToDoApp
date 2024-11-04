@@ -1,7 +1,7 @@
 const Modal = () => {
   return (
-    <div className="flex justify-center items-center">
-      <div className="flex justify-center items-center border rounded-md mt-5">
+    <div className="flex items-center absolute top-0 left-5 w-full h-full z-50">
+      <div className="flex justify-center items-center border rounded-md mt-5 bg-slate-500 shadow-2xl">
         <input
           type="text"
           placeholder="Todoを追加"
