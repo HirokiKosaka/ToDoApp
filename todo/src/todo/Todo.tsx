@@ -1,6 +1,14 @@
+import { useState } from "react";
 import Modal from "./Modal";
 
 const Todo = () => {
+  const [isModal, setIsModal] = useState(false);
+  const handleModalOpen: () => void = () => {
+    setIsModal(true);
+  };
+  const handleModalClose: () => void = () => {
+    setIsModal(false);
+  };
   return (
     <div className="w-full h-full relative">
       <div className="flex h-screen">
@@ -17,7 +25,10 @@ const Todo = () => {
               <button>learning English</button>
             </li>
           </ul>
-          <button className="border border-white rounded-md p-1 text-white">
+          <button
+            className="border border-white rounded-md p-1 text-white"
+            onClick={handleModalOpen}
+          >
             Add Todo
           </button>
         </div>
@@ -52,7 +63,7 @@ const Todo = () => {
           </button>
         </div>
       </div>
-      <Modal />
+      {isModal && <Modal closeModal={handleModalClose} />}
     </div>
   );
 };
